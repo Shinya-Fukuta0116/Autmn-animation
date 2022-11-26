@@ -1,0 +1,161 @@
+*{
+  padding: 0 ;
+  margin: 0 !important;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important;
+}
+body{
+  background-color: #000;
+  min-height: 200vh;
+}
+
+header{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important; 
+  align-items: center!important;
+  transition: 0.6s!important;
+  padding: 40px 100px !important;
+  z-index: 100000 !important;
+}
+
+header.sticky{
+  padding: 5px 100px !important;
+  background: rgba(199, 199, 199, 0.632) !important;
+}
+
+header .logo{
+  position: relative !important;
+  font-weight: 700 !important;
+  color: rgb(230, 227, 227);
+  font-size: 2em !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  transition: 0.6s !important;
+}
+
+header ul{
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+header ul li{
+  position: relative !important;
+  list-style: none !important;
+}
+
+header ul li a{
+  position: relative !important;
+  margin: 0 15px !important;
+  text-decoration: none !important;
+  color: rgb(222, 220, 220);
+  letter-spacing: 2px !important;
+  font-weight: 500px !important;
+  transition: 0.6s !important;
+}
+
+header.sticky .logo,
+header.sticky ul li a{
+  color: #000 !important;
+}
+
+.leaves-container{
+  background-image: url(./img/road-g9295b6e31_1920.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.leaves-container::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: o;
+  left: 0;
+  background-color: #000;
+  opacity: 0.1;
+}
+
+.leaves{
+  background-color: rgb(255, 81, 0);
+  border-radius: 0 70%;
+  transform: rotate(0deg);
+  position: absolute;
+  animation: leavesFall 30s linear;
+}
+
+#apl{
+  height: 135px;
+  width: 135px;
+}
+
+footer{
+  background-image: url(./img/benches-g1cd7a2217_1920.jpg);
+  height: 100vh;
+  padding-top: 100px;
+  background-size: cover;
+  background-position: center;
+  font-weight: 400;
+  color: rgb(222, 220, 220);
+}
+
+
+.footer{
+  font-size: 1rem;
+}
+
+footer ul li{
+  list-style-type: none;
+}
+.footer ul li a{
+  color: rgb(222, 220, 220);
+  font-size: 17px;
+}
+
+
+
+@keyframes leavesFall {
+  0%{
+    opacity: 0;
+    top: 0;
+    transform: translateX(100px);
+    transform: rotate(180deg)
+  }
+  30%{
+    opacity: 1;
+    transform: translateX(80px);
+  }
+  50%{
+    opacity: 0.5;
+    transform: translateX(90px);
+    transform: rotate(60deg)
+  }
+  60%{
+    opacity: 0.4;
+    transform: translateX(80px);
+  }
+  75%{
+    opacity: 0.8;
+    transform: translateX(-20px);
+    transform: rotate(60deg)
+  }
+  90%{
+    opacity: 0.3;
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100%{
+    opacity: 0;
+    top: 100vh;
+  }
+}
